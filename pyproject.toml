@@ -1,0 +1,29 @@
+[project]
+name = "tamebubu"
+version = "0.0.1"
+description = "Spaced practice for procedural skills, scheduled around the gaps it discovers from your work and reflections."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.14.1",
+    "pydantic-settings>=2.16.0",
+    "sqlalchemy>=2.1.5",
+    "sympy>=1.14.0",
+    "typer>=0.27.3",
+]
+
+[project.scripts]
+tbb = "tamebubu.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.40.2",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
