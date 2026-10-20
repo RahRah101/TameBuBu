@@ -476,6 +476,19 @@ Several extension points (checker, extractor, scheduler, practice planner, model
 Discovery uses the standard library's entry points. Plugins register under groups like `tamebubu.checkers` in pyproject.toml, so a second vertical can ship as its own installable package. pluggy (pytest's plugin system) is the upgrade path if I ever want several plugins responding to the same event. A dedicated registry module only once loading does more than look things up: readable errors, listing, protocol validation, wiring from config, test overrides.
 
 ---
+## The Practice representation problem 
+
+One of the biggest challenge is for the practice to contain enough exercises of different types to even run the loop we are describing here.
+The problem is that a solid "exercise bank" is hard to develop.
+As I explained earlier, sometimes gaps are intertopic. For example, a student may struggle in trigonometric substitution in Calculus, because they have poor fundamentals in trigonometry.
+If the "exercise bank" only has Calculus problems, adequate skill drills to work on this prerequisite will not be available.
+I guess a user could dynamically add their own "cards" over time as they study. They will know if their problem are poor pre-requisites if they do the reflection...
+
+So two problems :
+1. **Coverage:** not enough exercises for a gap in the band or type the planner wants (a far probe, a skill drill).
+2. **Prerequisite gaps:** the gap lives in another subject's material. A student may struggle with trigonometric substitution in Calculus because they have poor fundamentals in trigonometry. If the bank only has Calculus problems, adequate skill drills for that prerequisite won't be available. This is different from intertopic gaps: intertopic is elements combining badly; prerequisite is a weak foundation underneath.
+
+---
 
 ## Open problems
 
